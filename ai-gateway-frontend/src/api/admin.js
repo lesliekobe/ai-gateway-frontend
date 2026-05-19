@@ -1,0 +1,11 @@
+import api from './index'
+export const getDashboard = () => api.get('/admin/dashboard')
+export const getUsers = (params) => api.get('/admin/users', { params })
+export const createUser = (data) => api.post('/admin/users', data)
+export const updateUser = (id, data) => api.put(`/admin/users/${id}`, data)
+export const deleteUser = (id) => api.delete(`/admin/users/${id}`)
+export const resetUserPassword = (id) => api.post(`/admin/users/${id}/reset-password`)
+export const getKeys = () => api.get('/admin/keys')
+export const updateKeys = (data) => api.put('/admin/keys', data)
+export const getUsage = (params) => api.get('/admin/usage', { params })
+export const updatePackages = (data) => api.put('/admin/packages', data)
